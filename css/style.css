@@ -1588,14 +1588,19 @@ b/* General container styling */
     color: #000000;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
-	direction: rtl;
+    direction: rtl;
+    display: flex;
+    justify-content: center; /* Centers the footer content */
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centers the footer widgets */
     gap: 20px;
+    width: 100%;
 }
 
 /* Footer Widget Styling */
@@ -1603,6 +1608,7 @@ b/* General container styling */
     flex: 1 1 45%; /* Flexibility for two columns on desktop, full width on mobile */
     min-width: 250px;
     padding: 10px;
+    text-align: center; /* Centers text inside each widget */
 }
 
 .footer-title {
@@ -1667,12 +1673,12 @@ b/* General container styling */
 @media (max-width: 768px) {
     .footer-row {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Ensures items are centered in mobile view */
     }
     
     .footer-widget {
         flex: 1 1 100%;
-        text-align: center;
+        text-align: center; /* Ensures each widget's content is centered on mobile */
     }
 }
 
