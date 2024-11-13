@@ -1,0 +1,225 @@
+/* Page Content */
+.page-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Post Section */
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.thumb-big img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Meta-Box and Address Styling */
+.meta-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.meta-box h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.meta-more {
+    font-size: 0.8em;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.address {
+    font-size: 1em;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.address h2 {
+    font-size: 1.2em;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Contact Section */
+.address div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: cursive;
+    direction: ltr;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.address div img,
+.address div svg {
+    width: 50px;
+    height: 50px;
+}
+
+.address div span,
+.address div a {
+    font-size: 1.1em;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.address div a:hover {
+    color: #2196F3;
+}
+
+/* Button Styling */
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button1:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post {
+        flex-direction: column;
+    }
+
+    .address div {
+        justify-content: space-between;
+    }
+
+    .button1 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Footer Widget Styling */
+.footer-widget {
+    flex: 1 1 45%; /* Flexibility for two columns on desktop, full width on mobile */
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-widget p,
+.footer-widget address {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.footer-widget a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-widget a:hover {
+    text-decoration: underline;
+}
+
+.icon-phone,
+.icon-print,
+.icon-envelope-alt,
+.icon-globe {
+    color: #1e90ff;
+    margin-right: 8px;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Back to Top Button */
+#toTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#toTop:hover {
+    background: #1e90ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-widget {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
