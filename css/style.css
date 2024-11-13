@@ -6897,7 +6897,7 @@ td .avatar {width:20px;height:20px}
 	float:left;
 	margin:6px 0
 }
-#mobilepro i{color:#FFF}
+#mobilepro i{background-color:#a0d053; color:#fff }
 .subarrow {display:none}
 
 /*	Admin
