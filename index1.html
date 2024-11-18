@@ -69,6 +69,18 @@
         .sidebar.open {
     transform: translateX(0);
   }
+  @media (max-width: 768px) {
+  .header_v8 {
+    font-size: smaller;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .menu-button {
+    left: 10px;
+    top: 10px;
+  }
+}
 
   .sidebar a {
     color: white;
@@ -116,59 +128,142 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  body, html {
-    margin: 0;
-    padding: 0;
-   
-}
-
-.moving-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 138vh;
-    background-image: url('images/back2.webp'); /* مسیر تصویر */
-    background-size: cover; /* تصویر تمام صفحه */
-    background-repeat: repeat-x; /* تکرار افقی */
-    animation: moveBackground 10s linear infinite; /* انیمیشن حرکت */
-}
-
-@keyframes moveBackground {
-    0% {
-        background-position: 0 0;
+    </style>
+<style>
+    /* General Body Styling */
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
     }
-    100% {
-        background-position: -100% 0;
+  
+    /* Main Background Section */
+    .background {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      background: url('./images/back2.webp') center/cover no-repeat, 
+                  linear-gradient(135deg, rgba(230, 57, 70, 0.8), rgba(69, 123, 157, 0.8));
+      background-blend-mode: multiply;
+      animation: glow 15s ease-in-out infinite;
     }
+  
+    .background h1 {
+      font-size: 3rem;
+      margin: 0.5rem;
+      animation: fadeIn 3s ease-in;
+    }
+  
+    .background p {
+      font-size: 1.5rem;
+      margin: 0;
+      animation: fadeIn 5s ease-in;
+    }
+  
+    /* Sidebar Styling */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 10;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+  
+    .menu-button {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 15;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  
+    /* Desktop Behavior */
+    @media (min-width: 768px) {
+      .sidebar {
+        transform: translateX(0);
+      }
+      .menu-button {
+        display: none;
+      }
+    }
+  
+    /* Animations */
+    @keyframes glow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .sidebar {
+    width: 200px; /* عرض نوار کناری */
+    background: rgba(0, 0, 0, 0.7);
+    padding:5px; /* فضای داخلی */
+    display: flex;
+    flex-direction: column; /* چینش عمودی آیتم‌ها */
+    align-items: center; /* تراز وسط آیتم‌ها */
 }
 
-.logo-container1 {
-            width: 100%;
-            height: 47vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px; /* گوشه‌های گرد (اختیاری) */
-            background: linear-gradient(45deg, #deeb34, #fad0c4, #fbc2eb,rgb(40, 202, 53));
-            background-size: 400% 400%;
-            animation: gradientAnimation 8s ease infinite;
-        }
+.sidebar .logo {
+    margin-bottom: 15px; /* فاصله بین لوگو و لینک‌ها */
+}
 
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+.sidebar .logo img {
+    width: 100px; /* عرض لوگو */
+    height: auto; /* حفظ تناسب لوگو */
+}
 
-        .logo1 {
-            width: 100vw;
-            height: 47vh;
-            background: url('./images/logo2.jpg') no-repeat center;
-            background-size: contain;
-        }
+.sidebar a {
+    text-decoration: none; /* حذف خط زیر متن */
+    color: #333; /* رنگ متن لینک‌ها */
+    padding: 5px 0; /* کاهش فاصله عمودی لینک‌ها */
+    font-size: 16px; /* اندازه متن */
+    text-align: center; /* تراز وسط متن */
+}
+
+.sidebar a:hover {
+    color: #007bff; /* رنگ لینک هنگام هاور */
+}
+
   </style>
-
+  </head>
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -189,127 +284,46 @@
 
 </head>
 
-<body class="home shop shop-page tt_responsive">
- 
-    <div class="moving-background"></div>
-    <div id="home content">
-        <div id="layout" class="full"> 
-            
-             <header id="header"class="header_v8 header_v10">
-                <div class="headdown">
-                    <a href="index.html">
-                        <img src="images/favicon_io/android-chrome-512x512.png" width="96px" alt="Logo of فروشگاه فرش حاج خلیلی" />
-                    </a>
-                    <div>
-                        <span>
-                            <h3> فرش حاج خلیلی</h3>
-                        </span>
-                    </div>
-                    <div class="language-switcher">
-                        <button>EN</button>
-                        <button>FA</button>
-                    </div>
-                </div>
-            </header> 
-        <div class="page-content">
-            <div class="row clearfix">
-               
-                <div class="grid_12 content-containe background">
-                    <div class="tt_text_column tt_content_element">
-                        <h2>فروشگاه فرش حاج خلیلی با قدمتی بیش از 40 سال</h2>
-                        <p>فروشگاه حاج خلیلی با بیش از 40 سال سابقه درخشان در زمینه تولید، تهیه، خرید و فروش فرش، یکی از قدیمی‌ترین و معتبرترین مراکز در این صنعت در کل ایران به شمار می‌آید. این مجموعه با افتخار به ارائه فرش‌هایی با کیفیت بی‌نظیر و قیمت‌های مناسب پرداخته و همواره تلاش کرده است تا هنر دست هنرمندان برجسته کرمان زمین را به نمایش بگذارد. فرش‌های ما نه تنها نمادی از زیبایی و هنر ایرانی هستند بلکه معرف تاریخ، فرهنگ و اصالت این سرزمین نیز می‌باشند.</p>
-                        <p>  ما در فروشگاه حاج خلیلی به این باور داریم که هر فرش داستانی منحصر به فرد دارد و بافت آن از دل تاریخ و فرهنگ ایران برمی‌خیزد. از این‌رو، سعی داریم تا با ارائه مشاوره‌های تخصصی و رنگ‌آمیزی‌های متنوع، نیازها و سلیقه‌های هر مشتری را برآورده کنیم. </p>
-                         <p> اصالت، کیفیت و هنر در هسته‌ی فعالیت‌های ما قرار دارد و ما به‌عنوان نماینده‌ای از صنعت فرش ایران، می‌کوشیم تا سهم خود را در ترویج این هنر گرانبها ایفا کنیم. هدف ما نه تنها فروش محصول، بلکه ایجاد تجربه‌ای بی‌نظیر برای مشتریان عزیزمان در انتخاب و خرید فرش است.</p>
-                 
-                    </div> 
-                </div> 
-            </div>
-            <div class="about-video">
-                <button id="play-video-btn">نمایش ویدیو</button>
-                <div id="video-container" style="display: none;">
-                    <video id="about-video" controls muted>
-                        <source src="images/vid.MOV" type="video/mp4">
-                        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-                    </video>
-                </div>
-            </div>
+<body class="home shop shop-page tt_responsive background">
+    <!-- <div class="background-pattern"></div> -->
+   
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="./images/logo2.jpg" alt="Logo" />
         </div>
-        
-                
-        <div class="official-shop">
-            <div class="woo-title">
-                <h3 class="col-title">فروشگاه<small><br> نمایش از 1-10</small></h3>
-                <span class="liner"></span>
-            </div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+      <button class="menu-button" onclick="toggleSidebar()">☰ Menu</button>
+    
+     <div id="layout" class="full"> 
             
-            <div class="productsa-container">
-                <ul class="productsa">
-                    <li class="producta">
-                        <a href="single-image.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 01).jpg" alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                    <li class="producta">
-                        <a href="single-image2.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 02).jpg" alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                    <li class="producta">
-                        <a href="single-image3.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 03).jpg" alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                    <li class="producta">
-                        <a href="single-image4.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 04).jpg "alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                    <li class="producta">
-                        <a href="single-image5.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 05).jpg" alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                    <li class="producta">
-                        <a href="single-image6.html">
-                            <img src="images/StockPhoto/Persian Carpet (Fileboom 06).jpg" alt="فرش نفیس تبریز">
-                            <h3>فرش نفیس تبریز</h3>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <header id="header"class="header_v8 header_v10">
+               <div class="head my_sticky">
+                   <div class="row clearfix">
+                     
+                       <nav class="main">
+                           <ul id="menu-main" class="sf-menu" style="font-size: medium;">
+                               <li class="menu-item current-menu-item selectedLava"><a href="index.html">خانه</a></li>
+                               <li class="menu-item"><a href="shop.html">فروشگاه</a></li>
+                               <li class="menu-item"><a href="contact.html">تماس با ما</a></li>
+                           </ul>
+                       </nav>
+                   </div>
+               </div>
+           </header> 
         </div>
+      <div class="background">
         
-        <footer id="footer">
-            <div class="footer-row">
-                <!-- About Us Section -->
-                <div class="footer-widget about-widget">
-                    <h3 class="footer-title">درباره ی ما</h3>
-                    <p>فروشگاه حاج خلیلی با بیش از 40 سال سابقه تولید، تهیه، خرید و فروش فرش در کل ایران فعالیت دارد. مجموعه‌ی ما مفتخر است که با هنر دست هنرمندان کرمان زمین با بهترین کیفیت و قیمت سهمی از این صنعت و هنر را داشته باشد. اصالت نماد راه ماست</p>
-                </div>
-        
-                <!-- Contact Section -->
-                <div class="footer-widget contact-widget">
-                    <h3 class="footer-title">تماس</h3>
-                    <address>
-                        <p>کرمان شهر فرش</p>
-                        <p><i class="icon-phone"></i> 09011058624</p>
-                        <p><i class="icon-print"></i> +1 (300) 99 88 77</p>
-                        <p><a href="mailto:hajkhalilicarpets@gmail.com" target="_blank"><i class="icon-envelope-alt"></i> hajkhalilicarpets@gmail.com</a></p>
-                        <p><a href="http://maps.google.com" target="_blank"><i class="icon-globe"></i> کرمان، بازار، میدان شهدا، خ. مشتاقیه</a></p>
-                    </address>
-                </div>
-            </div>
-        
-            <div class="footer-bottom">
-                <span>کپی رایت توسط محمدرضا حاج خلیلی ©</span>
-            </div>
-        </footer>
-        <div id="toTop"><i class="icon-angle-up"></i></div>
+        <h1>Welcome to Persian Carpets</h1>
+        <p>Explore the timeless elegance of Persian art.
+    
+        </p>
+      </div>
+   
+
         
 
     <!-- JavaScripts -->
@@ -412,5 +426,11 @@
                 });
         }); /*ready*/
     </script>
+      <script>
+        function toggleSidebar() {
+          const sidebar = document.getElementById('sidebar');
+          sidebar.classList.toggle('open');
+        }
+      </script>
 </body>
 </html>
