@@ -70,7 +70,8 @@ a:hover, a:focus {
 .sf-menu a:hover {
 	color: #000000;
 }
-
+.sf-menu li li a {
+}
 .head {
 	border-top-width:5px;
 }
@@ -187,8 +188,37 @@ i, .table table i:before {
 .tbutton.tbutton5.color1 i, .tbutton.tbutton6.color1 i, .tbutton.tbutton7.color1 i {
 	color:#66931d;
 }
-
-
+.footer-last {
+	background-color:#a0d053;
+}
+#footer {
+	color:#000000;
+}
+#footer a {
+	color:#000000
+}
+#footer a:hover {
+	color:#386600
+}
+#footer .col-title {
+	color:#136000 !important;
+	border-color:#136000 !important
+}
+#footer .liner {
+	border-color:#c9c9c9 !important
+}
+#footer .copyright {
+	color:#386600
+}
+#footer .copyright a {
+	color:#396800 !important;
+}
+#footer .foot-menu li a, #footer .foot-menu li:before {
+	color:#000000 !important;
+}
+#footer i {
+	color:#999999
+}
 .breadcrumb-place {
 	background-color:#a0d053;
 	height:110px;
@@ -225,6 +255,9 @@ i, .table table i:before {
 .shop #content input.button,  .shop #respond input#submit,  .shop a.button,  .shop button.button,  .shop input.button,  .shop #content .quantity .minus,  .shop #content .quantity .plus,  .shop .quantity .minus,  .shop .quantity .plus {
 	background:#66931d !important;
 }
+.shop a span.onsale, .shop span.onsale {
+	background:#727272 !important;
+}
 .tparrows {
 	text-align:center;
 	font-family:FontAwesome;
@@ -235,7 +268,7 @@ i, .table table i:before {
 	height:40px !important;
 	border-radius:4px;
 	background:none !important;
-	background-color:#66931d !important;
+	background-color:red !important;
 	opacity:.6
 }
 .tp-leftarrow.default:before {
