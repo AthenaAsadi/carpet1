@@ -34,7 +34,7 @@
             display: inline-block;  
         }  
         .dropbtn {  
-            background-color: #4CAF50; /* رنگ دکمه */  
+            background-color: #460000; /* رنگ دکمه */  
             color: white; /* رنگ متن */  
             padding: 10px 16px; /* حاشیه داخلی */  
             font-size: 16px; /* اندازه فونت */  
@@ -119,19 +119,30 @@
   body, html {
     margin: 0;
     padding: 0;
-   
+    height: 100%;
 }
 
 .moving-background {
-    position: absolute;
+    position: fixed; /* Ensures the background stays in place during scrolling */
     top: 0;
     left: 0;
     width: 100%;
-    height: 138vh;
-    background-image: url('images/back2.webp'); /* مسیر تصویر */
-    background-size: cover; /* تصویر تمام صفحه */
-    background-repeat: repeat-x; /* تکرار افقی */
-    animation: moveBackground 10s linear infinite; /* انیمیشن حرکت */
+    height: 100%;
+    z-index: -1; /* Moves it behind other content */
+    background-image: url('images/back2.webp'); /* Path to your background image */
+    background-size: cover;
+    animation: moveBackground 10s linear infinite;
+}
+
+/* Exclude header and footer */
+#header {
+    position: relative;
+    z-index: 1; /* Ensures it stays above the background */
+}
+
+#footer {
+    position: relative;
+    z-index: 1; /* Ensures it stays above the background */
 }
 
 @keyframes moveBackground {
@@ -150,7 +161,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 20px; /* گوشه‌های گرد (اختیاری) */
-            background: linear-gradient(45deg, #deeb34, #fad0c4, #fbc2eb,rgb(40, 202, 53));
+            background: linear-gradient(45deg, #460000, #F5DEB3 , #A0522D ,rgb(202, 156, 40));
             background-size: 400% 400%;
             animation: gradientAnimation 8s ease infinite;
         }
@@ -195,22 +206,31 @@
     <div id="home content">
         <div id="layout" class="full"> 
             
-             <header id="header"class="header_v8 header_v10">
+            <header id="header"class="header_v8 header_v10">
                 <div class="headdown">
-                    <a href="index.html">
+                    <a href="index.html"">
                         <img src="images/favicon_io/android-chrome-512x512.png" width="96px" alt="Logo of فروشگاه فرش حاج خلیلی" />
                     </a>
                     <div>
                         <span>
-                            <h3> فرش حاج خلیلی</h3>
+                            <h2> فرش حاج خلیلی</h2>
                         </span>
                     </div>
-                    <div class="language-switcher">
-                        <button>EN</button>
-                        <button>FA</button>
-                    </div>
-                </div>
-            </header> 
+                </div><!-- headdown -->
+                
+                <div class="head my_sticky">
+                    <div class="row clearfix">
+                        <!-- Menu -->
+                        <nav class="main">
+                            <ul id="menu-main" class="sf-menu" style="font-size: medium;">
+                                <li class="menu-item current-menu-item selectedLava"><a href="index.html">خانه</a></li>
+                                <li class="menu-item"><a href="shop.html">فروشگاه</a></li>
+                                <li class="menu-item"><a href="contact.html">تماس با ما</a></li>
+                            </ul>
+                        </nav><!-- /Menu -->
+                    </div><!-- row -->
+                </div><!-- head -->
+            </header><!-- end header -->
         <div class="page-content">
             <div class="row clearfix">
                
@@ -238,7 +258,7 @@
                 
         <div class="official-shop">
             <div class="woo-title">
-                <h3 class="col-title">فروشگاه<small><br> نمایش از 1-10</small></h3>
+                <h3 class="col-title">فروشگاه</h3>
                 <span class="liner"></span>
             </div>
             

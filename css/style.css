@@ -911,7 +911,7 @@ div.frame_10 { background:url(images/frames/10.png) repeat-y center top }
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     background: url('back2.webp') center/cover no-repeat, 
-                linear-gradient(135deg, rgba(230, 57, 70, 0.8), rgba(69, 123, 157, 0.8));
+                linear-gradient(135deg, rgba(81, 0, 7, 0.8), rgba(220, 184, 161, 0.8));
     background-blend-mode: multiply;
     animation: glow 15s ease-in-out infinite;
   }
@@ -1249,7 +1249,6 @@ ul.sub-menu:after {border-left:6px solid transparent;
 }
 /* Header styling */
 #header {
-	background: linear-gradient(135deg, #FF6F61, #D83D6D);
 	color: #fff;
 	text-align: center;
 	padding: 80px 20px;
@@ -1258,12 +1257,11 @@ ul.sub-menu:after {border-left:6px solid transparent;
     padding: 10px 20px;
     border-bottom: 2px solid #ddd;
     font-family: Arial, sans-serif;
-	background: linear-gradient(45deg, #ecf75b, #cadf10, #e73278, rgb(40, 202, 53));
+	background: linear-gradient(45deg,#660000, #ffffff, #ddc69f);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
 
 }
-
 .headdown {
     display: flex;
     flex-direction: row;
@@ -1344,8 +1342,8 @@ ul.sub-menu:after {border-left:6px solid transparent;
 }
 
 .sf-menu li a:hover, .sf-menu .selectedLava a {
-    color: #046e1d;
-    border-bottom: 2px solid #046e1d;
+    color: #460000;
+    border-bottom: 2px solid #460000;
 }
 
 /* Dropdown styling */
@@ -1355,7 +1353,7 @@ ul.sub-menu:after {border-left:6px solid transparent;
 }
 
 .dropbtn {
-    background-color: #046e1d;
+    background-color: #460000;
     color: #ffffff;
     padding: 8px 16px;
     font-size: 1em;
@@ -1366,7 +1364,7 @@ ul.sub-menu:after {border-left:6px solid transparent;
 }
 
 .dropbtn:hover {
-    background-color: #046e1d;
+    background-color: #460000;
 }
 
 .dropdown-content {
@@ -1458,7 +1456,7 @@ ul.sub-menu:after {border-left:6px solid transparent;
 #play-video-btn {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #3f9637;
+    background-color: #460000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1467,7 +1465,7 @@ ul.sub-menu:after {border-left:6px solid transparent;
 }
 
 #play-video-btn:hover {
-    background-color: #126318;
+    background-color: #460000;
 }
 
 #video-container {
@@ -1537,19 +1535,16 @@ b/* General container styling */
 
 .col-title {
     font-size: 1.8em;
-    color: #222;
+    color: #000000;
 }
 
-.col-title small {
-    font-size: 0.8em;
-    color: #666;
-}
+
 
 .liner {
     display: block;
     width: 50px;
     height: 3px;
-    background: #444;
+    background: #ffffff;
     margin: 10px auto;
 }
 
@@ -1598,7 +1593,7 @@ b/* General container styling */
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #188d2c;
+    background-color: #460000;
     color: #000000;
     text-decoration: none;
     border-radius: 4px;
@@ -1607,7 +1602,7 @@ b/* General container styling */
 }
 
 .button-primary:hover {
-    background-color: #188d2c;
+    background-color: #460000;
 }
 
 /* Responsive adjustments */
@@ -1681,7 +1676,7 @@ b/* General container styling */
 }
 
 .footer-widget a {
-    color: #188d2c;
+    color: #460000;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -1694,7 +1689,7 @@ b/* General container styling */
 .icon-print,
 .icon-envelope-alt,
 .icon-globe {
-    color: #188d2c;
+    color: #460000;
     margin-right: 8px;
 }
 
@@ -1722,7 +1717,7 @@ b/* General container styling */
 }
 
 #toTop:hover {
-    background: #188d2c;
+    background: #460000;
 }
 
 /* Responsive Design */
@@ -6953,7 +6948,7 @@ td .avatar {width:20px;height:20px}
 	float:left;
 	margin:6px 0
 }
-#mobilepro i{background-color:#a0d053; color:#fff }
+#mobilepro i{background-color:#460000; color:#fff }
 .subarrow {display:none}
 
 /*	Admin
@@ -6973,8 +6968,6 @@ td .avatar {width:20px;height:20px}
     margin: 0;
     padding: 0;
 }
-
-/
 
 /* Gap Styling */
 .gap {
@@ -7052,7 +7045,7 @@ td .avatar {width:20px;height:20px}
 /* Responsive Layout */
 @media (max-width: 768px) {
     .page-content {
-        padding: 15px;
+        padding: 40px;
     }
 
     .map-container,
