@@ -1257,7 +1257,7 @@ ul.sub-menu:after {border-left:6px solid transparent;
     padding: 10px 20px;
     border-bottom: 2px solid #ddd;
     font-family: Arial, sans-serif;
-	background: linear-gradient(45deg,#660000, #ffffff, #ddc69f);
+	background: linear-gradient(45deg,#ffffff, #660000, #ddc69f);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
 
