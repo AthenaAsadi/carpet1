@@ -7061,3 +7061,55 @@ td .avatar {width:20px;height:20px}
         font-size: 1.2rem;
     }
 }
+
+
+
+/* Base styles for product section */
+.products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Three columns */
+	gap: 20px; /* Space between items */
+	padding: 20px;
+	list-style: none; /* Remove bullet points */
+	margin: 0;
+  }
+  
+  .products .product {
+	text-align: center;
+	background: #f9f9f9; /* Light background for product cards */
+	border: 1px solid #ddd; /* Subtle border */
+	border-radius: 10px; /* Rounded corners */
+	padding: 15px;
+	transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+  }
+  
+  .products .product img {
+	max-width: 100%; /* Ensure images are responsive */
+	border-radius: 8px; /* Rounded image edges */
+	margin-bottom: 10px; /* Space below the image */
+  }
+  
+  .products .product h3 {
+	font-size: 1.2rem; /* Adjust heading size */
+	color: #5b0000; /* Accent color for text */
+	margin: 10px 0;
+  }
+  
+  .products .product:hover {
+	transform: translateY(-5px); /* Slight lift on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	.products {
+	  grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.products {
+	  grid-template-columns: 1fr; /* Single column on mobile */
+	}
+  }
+  

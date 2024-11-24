@@ -32,16 +32,195 @@
 	
      <!-- Stylesheets -->
 	 <link rel='stylesheet' id='stylesheet-css'  href='css/2.css' type='text/css' media='all' />
-	 <link rel='stylesheet' id='stylesheet-css'  href='css/style.css' type='text/css' media='all' />
-	 <link rel='stylesheet' id='icons-css'  href='css/icons.css' type='text/css' media='all' />
-   
-	 <!-- Responsive CSS -->
-	 <link rel='stylesheet' id='responsive-css'  href='css/responsive.css' type='text/css' media='all' />
-</head>
-
-    
-<body class="home page tt_responsive">
-	
+	 <link rel='stylesheet' id='stylesheet-css' href='css/style.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='icons-css' href='css/icons.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='responsive-css' href='css/vc.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='animate-css' href='css/animate.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='shortcodes-css' href='css/shortcodes.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='revslider-css' href='css/settings.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='ms-main-css' href='css/masterslider.main.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='shop-css' href='css/shop.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='responsive-css' href='css/responsive.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='custom-css' href='css/custom-styles.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='rtl-css' href='css/rtl.css' type='text/css' media='all' />
+	 <link rel='stylesheet' id='rtl-css' href='css/me-style.css' type='text/css' media='all' />
+ 
+	 <style>  
+ 
+		 .dropdown {  
+			 position: relative;  
+			 display: inline-block;  
+		 }  
+		 .dropbtn {  
+			 background-color: #460000; /* رنگ دکمه */  
+			 color: white; /* رنگ متن */  
+			 padding: 10px 16px; /* حاشیه داخلی */  
+			 font-size: 16px; /* اندازه فونت */  
+			 border: none; /* بدون حاشیه */  
+			 cursor: pointer; /* نشانگر ماوس */  
+			 border-radius: 5px; /* گوشه‌های گرد */  
+		 }  
+		 .dropdown-content {  
+			 display: none; /* پنهان به طور پیش‌فرض */  
+			 position: absolute; /* نمایش در موقعیت مطلق */  
+			 right: 0; /* باز شدن از سمت راست */  
+			 background-color: #f9f9f9; /* رنگ پس‌زمینه */  
+			 min-width: 160px; /* حداقل عرض */  
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* سایه */  
+			 z-index: 1; /* بالاتر از سایر محتویات */  
+			 overflow: auto; /* جلوگیری از رفتن محتوا خارج از صفحه */  
+			 border-radius: 5px; /* گوشه‌های گرد */  
+		 }  
+		 .dropdown:hover .dropdown-content {  
+			 display: block; /* نشان دادن منو هنگام هاور */  
+		 }  
+		 .dropdown-content a {  
+			 color: black; /* رنگ متن لینک */  
+			 padding: 12px 16px; /* حاشیه داخلی لینک */  
+			 text-decoration: none; /* حذف زیرخط */  
+			 display: flex; /* برای تنظیم محتویات به صورت افقی */  
+			 align-items: center; /* مرکز کردن عمودی */  
+		 }  
+		 .dropdown-content a:hover {  
+			 background-color: #f1f1f1; /* رنگ پس‌زمینه هنگام هاور بر روی لینک */  
+		 } 
+		 .sidebar.open {
+	 transform: translateX(0);
+   }
+ 
+   .sidebar a {
+	 color: white;
+	 text-decoration: none;
+	 font-size: 1.2rem;
+	 margin: 0.5rem 0;
+   }
+ 
+   .sidebar a:hover {
+	 text-decoration: underline;
+   }
+ 
+   .menu-button {
+	 position: fixed;
+	 top: 1rem;
+	 left: 1rem;
+	 background: rgba(0, 0, 0, 0.7);
+	 color: white;
+	 border: none;
+	 padding: 0.5rem 1rem;
+	 cursor: pointer;
+	 z-index: 15;
+	 border-radius: 5px;
+	 font-size: 1rem;
+   }
+ 
+   /* Desktop Behavior */
+   @media (min-width: 768px) {
+	 .sidebar {
+	   transform: translateX(0);
+	 }
+	 .menu-button {
+	   display: none;
+	 }
+   }
+ 
+   /* Animations */
+   @keyframes glow {
+	 0% { background-position: 0% 50%; }
+	 50% { background-position: 100% 50%; }
+	 100% { background-position: 0% 50%; }
+   }
+ 
+   @keyframes fadeIn {
+	 from { opacity: 0; transform: translateY(20px); }
+	 to { opacity: 1; transform: translateY(0); }
+   }
+   body, html {
+	 margin: 0;
+	 padding: 0;
+	 height: 100%;
+ }
+ 
+ .moving-background {
+	 position: fixed; /* Ensures the background stays in place during scrolling */
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: -1; /* Moves it behind other content */
+	 background-image: url('images/back2.webp'); /* Path to your background image */
+	 background-size: cover;
+	 animation: moveBackground 10s linear infinite;
+ }
+ 
+ /* Exclude header and footer */
+ #header {
+	 position: relative;
+	 z-index: 1; /* Ensures it stays above the background */
+ }
+ 
+ #footer {
+	 position: relative;
+	 z-index: 1; /* Ensures it stays above the background */
+ }
+ 
+ @keyframes moveBackground {
+	 0% {
+		 background-position: 0 0;
+	 }
+	 100% {
+		 background-position: -100% 0;
+	 }
+ }
+ 
+ .logo-container1 {
+			 width: 100%;
+			 height: 47vh;
+			 display: flex;
+			 justify-content: center;
+			 align-items: center;
+			 border-radius: 20px; /* گوشه‌های گرد (اختیاری) */
+			 background: linear-gradient(45deg, #460000, #F5DEB3 , #A0522D ,rgb(202, 156, 40));
+			 background-size: 400% 400%;
+			 animation: gradientAnimation 8s ease infinite;
+		 }
+ 
+		 @keyframes gradientAnimation {
+			 0% { background-position: 0% 50%; }
+			 50% { background-position: 100% 50%; }
+			 100% { background-position: 0% 50%; }
+		 }
+ 
+		 .logo1 {
+			 width: 100vw;
+			 height: 47vh;
+			 background: url('./images/logo2.jpg') no-repeat center;
+			 background-size: contain;
+		 }
+   </style>
+ 
+	 <script type="application/ld+json">
+	 {
+	   "@context": "http://schema.org",
+	   "@type": "LocalBusiness",
+	   "name": "فروشگاه فرش حاج خلیلی",
+	   "image": "https://example.com/logo.jpg",
+	   "telephone": "03433352222",
+	   "address": {
+		 "@type": "PostalAddress",
+		 "addressLocality": "کرمان",
+		 "addressRegion": "کرمان",
+		 "streetAddress": "بازار، میدان شهدا"
+	   },
+	   "url": "https://www.yourwebsite.com",
+	   "description": "فروشگاه فرش حاج خلیلی با بیش از 40 سال تجربه در خرید و فروش فرش‌های نفیس ایرانی."
+	 }
+	 </script>
+ 
+ </head>
+ 
+ <body class="home shop shop-page tt_responsive">
+  
+	 <div class="moving-background"></div>
 	<div id="home" >
 		
 		<div id="layout" class="full">    
