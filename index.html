@@ -33,6 +33,7 @@
 
     <style>  
 
+
         .dropdown {  
             position: relative;  
             display: inline-block;  
@@ -205,6 +206,48 @@
     body {
       height: 1080px; /* For testing scrolling */
     }
+
+
+    .language-switch {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between buttons */
+    width: 100%; /* Ensure it spans the full width of the parent */
+    position: relative; /* Helps in maintaining structure */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.lang-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #5f0000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Ensures consistent behavior for links styled as buttons */
+    text-align: center;
+}
+
+.lang-button:hover {
+    background-color: #b30000;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .language-switch {
+        flex-direction: row; /* Stack buttons vertically on smaller screens */
+        gap: 5px;
+    }
+
+    .lang-button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
   </style>
 
     <script type="application/ld+json">
@@ -233,9 +276,15 @@
     <div id="home content">
         <div id="layout" class="full"> 
             
-            <header id="header"class="header_v8 header_v10">
+            <header id="header" class="header_v8 header_v10">
+                <!-- Language Switch Buttons -->
+            <div class="language-switch">
+                <a href="en/index.html" class="lang-button" lang="fa">فارسی</a>
+                <a href="ar/index-ar.html" class="lang-button" lang="ar">العربية</a>
+                <a href="index-en.html" class="lang-button" lang="en">English</a>
+            </div><!-- /Language Switch -->
                 <div class="headdown">
-                    <a href="index.html"">
+                    <a href="index.html">
                         <img src="images/favicon_io/android-chrome-512x512.png" width="96px" alt="Logo of فروشگاه فرش حاج خلیلی" />
                     </a>
                     <div>
@@ -244,7 +293,7 @@
                         </span>
                     </div>
                 </div><!-- headdown -->
-                
+            
                 <div class="head my_sticky">
                     <div class="row clearfix">
                         <!-- Menu -->
@@ -258,6 +307,8 @@
                     </div><!-- row -->
                 </div><!-- head -->
             </header><!-- end header -->
+        
+            
         <div class="page-content">
             <div class="row clearfix">
                
