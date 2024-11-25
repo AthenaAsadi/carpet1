@@ -48,7 +48,7 @@
 	   <link rel='stylesheet' id='custom-css' href='css/custom-styles.css' type='text/css' media='all' />
 	   <link rel='stylesheet' id='rtl-css' href='css/rtl.css' type='text/css' media='all' />
 	   <link rel='stylesheet' id='rtl-css' href='css/me-style.css' type='text/css' media='all' />
-   
+	   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	   <style>  
    
 		   .dropdown {  
@@ -201,6 +201,29 @@
 			   background-size: contain;
 		   }
 	 </style>
+
+<style>
+    #scrollToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      background-color: #570000;
+      color: rgb(255, 255, 255);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    #scrollToTop:hover {
+      background-color: #800000;
+    }
+    body {
+      height: 1080px; /* For testing scrolling */
+    }
+  </style>
    
 	   <script type="application/ld+json">
 	   {
@@ -223,7 +246,7 @@
    </head>
    
    <body class="home shop shop-page tt_responsive">
-	
+	<button id="scrollToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 	   <div class="moving-background"></div>
 	
 	<div id="home" >
@@ -318,11 +341,26 @@
 					<span>کپی رایت توسط محمدرضا حاج خلیلی ©</span>
 				</div>
 			</footer>
-			<div id="toTop"><i class="icon-angle-up"></i></div>
+
+			<script>
+				// Get the button element
+				const scrollToTopButton = document.getElementById('scrollToTop');
 			
-
-	<div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
-
+				// Show the button when scrolling down
+				window.onscroll = function () {
+				  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+					scrollToTopButton.style.display = 'block';
+				  } else {
+					scrollToTopButton.style.display = 'none';
+				  }
+				};
+			
+				// Scroll to the top smoothly when the button is clicked
+				scrollToTopButton.onclick = function () {
+				  window.scrollTo({ top: 0, behavior: 'smooth' });
+				};
+			  </script>
+		
 	<!-- Javascripts -->
 	<script type='text/javascript' src='js/jquery/jquery.js?ver=1.11.0'></script>
 	<script type='text/javascript' src='js/themetor.js?ver=1.0'></script>
